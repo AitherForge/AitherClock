@@ -1,8 +1,8 @@
 /* Aither Backend client — shared across Aither apps. */
-(() => {
+(()=>{
   const STORAGE_KEY='aither-backend-url';
   const LEGACY_URL='https://aither-backend.onrender.com';
-  const DEFAULT_URL='https://aitherbackend.onrender.com';
+  const DEFAULT_URL='https://aitherbackendnew.onrender.com';
   const api=window.AitherBackend={};
   const normalize=v=>String(v||'').trim().replace(/\/+$/,'');
   api.getUrl=()=>{const stored=normalize(localStorage.getItem(STORAGE_KEY));if(stored===LEGACY_URL){localStorage.removeItem(STORAGE_KEY);return DEFAULT_URL}return stored||DEFAULT_URL};
